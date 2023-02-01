@@ -1,0 +1,22 @@
+{
+  "name": "personal-site",
+  "version": "1.0.0",
+  "description": "Ben's personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safetythird/personal-site.git"
+  },
+  "author": "Ben Greenberg",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/safetythird/personal-site/issues"
+  },
+  "homepage": "https://github.com/safetythird/personal-site#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2"
+  }
+}
