@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
+  {#- Add to the CSS bundle #}
+  {%- css %}{% include "src/public/css/index.css" %}{% endcss %}
+
+  {#- Render the CSS bundle #}
+  {%- if eleventy.env.runMode === "serve" %}
+  {# External files (local dev live reload will refresh without page reload) #}
+  <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+  {%- else  %}
+  {# Inlined CSS (fastest site performance in production) #}
+  <style>{% getBundle "css" %}</style>
+  {%- endif %}
 </head>
 <body>
   {{ content | safe }}
