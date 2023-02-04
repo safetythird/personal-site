@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }}</title>
   {#- Add to the CSS bundle #}
-  {%- css %}{% include "src/public/css/index.css" %}{% endcss %}
+  {%- css %}{% include "node_modules/bamboo.css/dist/bamboo.min.css" %}{% endcss %}
 
   {#- Render the CSS bundle #}
   {%- if eleventy.env.runMode === "serve" %}
