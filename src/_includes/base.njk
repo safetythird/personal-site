@@ -17,6 +17,16 @@
   {%- endif %}
 </head>
 <body>
+  <header>
+    <a href="/" class="home-link">{{ metadata.title }}</a>
+
+    <nav>
+      <h2 class="visually-hidden">Top level navigation menu</h2>
+      <ul class="nav">
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+      </ul>
+    </nav>
+  </header>
   {{ content | safe }}
 </body>
 </html>
