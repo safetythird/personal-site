@@ -6,6 +6,7 @@
   <title>{{ title }}</title>
   {#- Add to the CSS bundle #}
   {%- css %}{% include "node_modules/bamboo.css/dist/bamboo.min.css" %}{% endcss %}
+  {%- css %}{% include "src/public/css/index.css" %}{% endcss %}
 
   {#- Render the CSS bundle #}
   {%- if eleventy.env.runMode === "serve" %}
@@ -23,7 +24,9 @@
     <nav>
       <h2 class="visually-hidden">Top level navigation menu</h2>
       <ul class="nav">
-      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+        {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+        {%- endfor %}
       </ul>
     </nav>
   </header>
