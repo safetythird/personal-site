@@ -2,10 +2,6 @@
 layout: base
 numberOfLatestPostsToShow: 3
 ---
-{% set postCount = collections.posts | length %}
-{% set latestPostCount = numberOfLatestPostsToShow %}
 <main>
   {{ content | safe }}
-  {% set postlist = collections.posts %}
-  {% include "postlist.njk" %}
 </main>

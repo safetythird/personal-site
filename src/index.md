@@ -9,3 +9,9 @@ Congratulations, you've found the homepage of Ben Greenberg. That's a big fuckin
 
 # About me
 Devoted husband and catfather. Engineering leader. Made out of meat.
+
+# Posts
+
+{% set postlist = collections.posts %}
+{% include "postlist.njk" %}
+

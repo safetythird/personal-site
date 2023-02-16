@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig) {
       .toFormat(format || "dd LLLL yyyy");
 	});
   return {
+    markdownTemplateEngine: "njk",
     dir: {
       input: "src"
     }
