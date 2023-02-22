@@ -8,6 +8,10 @@
 	width: 1px;
 }
 
+body { padding: 1rem 1rem }
+
+.postlist .postlist-item { margin: 1rem 0px 1rem 0px }
+
 /* Nav */
 .nav {
 	display: flex;
@@ -18,9 +22,6 @@
 .nav-item {
 	display: inline-block;
 	margin-right: 1em;
-}
-.nav-item a[href]:not(:hover) {
-	text-decoration: none;
 }
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
