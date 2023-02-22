@@ -18,6 +18,7 @@ module.exports = function(eleventyConfig) {
       .fromJSDate(dateObj, { zone: zone || "America/Los_Angeles" })
       .toFormat(format || "dd LLLL yyyy");
 	});
+  eleventyConfig.addWatchTarget("./src/public/css/index.css");
   return {
     markdownTemplateEngine: "njk",
     dir: {
