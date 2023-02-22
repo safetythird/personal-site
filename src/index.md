@@ -12,6 +12,6 @@ Devoted husband and catfather. Engineering leader. Made out of meat.
 
 # Latest post
 
-{% set postlist = collections.posts | head(1) %}
+{% set postlist = collections.posts | head(-1) %}
 {% include "postlist.njk" %}
 
