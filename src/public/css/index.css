@@ -10,7 +10,17 @@
 
 body { padding: 1rem 1rem }
 
-.postlist .postlist-item { margin: 1rem 0px 1rem 0px }
+
+/* Postlist */
+ol.postlist { padding: 0 }
+ol.postlist li  {
+  margin: 1rem 0px 1rem 0px;
+  list-style-type: none;
+}
+ol.postlist li.postlist-item-active a {
+  text-decoration: underline;
+}
+
 
 /* Nav */
 .nav {
