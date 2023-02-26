@@ -21,6 +21,7 @@ Grey box spanning the full width of the body with a dark-grey bottom border
 */
 header {
   display: flex;
+  flex-wrap: wrap;
   align-items: baseline;
   background: var(--b-bg-2);
   border-bottom: 2px solid var(--b-bg-border);
