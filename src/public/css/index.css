@@ -1,3 +1,9 @@
+/* Requires https://github.com/rilwis/bamboo */
+
+:root {
+  --b-bg-border: #dee2ea;
+}
+
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
 .visually-hidden {
 	clip: rect(0 0 0 0);
@@ -9,32 +15,24 @@
 	width: 1px;
 }
 
+/*
+Header and navbar
+Grey box spanning the full width of the body with a dark-grey bottom border
+*/
 header {
   display: flex;
   align-items: baseline;
+  background: var(--b-bg-2);
+  border-bottom: 2px solid var(--b-bg-border);
+  padding: 0 1rem;
 }
 
 .home-link {
-  font-size: 2em;
+  font-size: 2rem;
   margin-right: 1em;
   font-weight: 700;
 }
 
-body { padding: 1rem 1rem }
-
-
-/* Postlist */
-ol.postlist { padding: 0 }
-ol.postlist li  {
-  margin: 1rem 0px 1rem 0px;
-  list-style-type: none;
-}
-ol.postlist li.postlist-item-active a {
-  text-decoration: underline;
-}
-
-
-/* Nav */
 .nav {
 	display: flex;
 	padding: 0;
@@ -48,3 +46,25 @@ ol.postlist li.postlist-item-active a {
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
 }
+
+/*
+overriding https://github.com/rilwis/bamboo/blob/master/src/core.scss#L11
+so that header box will fill the page on mobile
+*/
+body { padding: 0 }
+
+/* Main element with same side padding as header box */
+main {
+  padding: 0 1rem;
+}
+
+/* Postlist that doesn't look like a numbered list */
+ol.postlist { padding: 0 }
+ol.postlist li  {
+  margin: 1rem 0px 1rem 0px;
+  list-style-type: none;
+}
+ol.postlist li.postlist-item-active a {
+  text-decoration: underline;
+}
+
